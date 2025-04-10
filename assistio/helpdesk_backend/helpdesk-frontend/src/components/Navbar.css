@@ -1,7 +1,7 @@
 .navbar {
     position: fixed;
     top: 0;
-    left: 250px; /* largura da sidebar */
+    left: 250px;
     right: 0;
     height: 60px;
     background-color: #1e272e;
@@ -19,27 +19,53 @@
     font-weight: bold;
   }
   
-  .navbar-right {
+  .navbar-profile-wrapper {
+    position: relative;
     display: flex;
     align-items: center;
-    gap: 20px;
-  }
-  
-  .navbar-user {
-    font-weight: 500;
-  }
-  
-  .navbar-btn {
-    background-color: #ff4757;
-    color: white;
-    border: none;
-    padding: 8px 12px;
-    border-radius: 5px;
     cursor: pointer;
-    transition: background 0.3s;
   }
   
-  .navbar-btn:hover {
-    background-color: #e84118;
+  .navbar-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #fff;
+    transition: transform 0.2s;
+  }
+  
+  .navbar-avatar:hover {
+    transform: scale(1.05);
+  }
+  
+  .navbar-dropdown {
+    position: absolute;
+    top: 55px;
+    right: 0;
+    background-color: #fff;
+    color: #333;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    min-width: 120px;
+    z-index: 999;
+  }
+  
+  .navbar-dropdown button {
+    background: none;
+    border: none;
+    padding: 10px 15px;
+    text-align: left;
+    font-size: 0.9rem;
+    cursor: pointer;
+    width: 100%;
+    transition: background 0.2s;
+  }
+  
+  .navbar-dropdown button:hover {
+    background-color: #f0f0f0;
   }
   

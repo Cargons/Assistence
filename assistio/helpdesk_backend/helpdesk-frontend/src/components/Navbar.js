@@ -1,13 +1,37 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Navbar.css';
+import { useNavigate } from 'react-router-dom';
 
 const Navbar = () => {
+  const [isDropdownVisible, setDropdownVisible] = useState(false);
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    // Aqui você pode limpar o token ou sessão
+    console.log('Logout');
+    navigate('/'); // Redirecionar após logout
+  };
+
   return (
     <nav className="navbar">
       <div className="navbar-logo">🎧 Help Desk</div>
-      <div className="navbar-right">
-        <span className="navbar-user">Olá, Operador</span>
-        <button className="navbar-btn">Logout</button>
+
+      <div 
+        className="navbar-profile-wrapper"
+        onMouseEnter={() => setDropdownVisible(true)}
+        onMouseLeave={() => setDropdownVisible(false)}
+      >
+        <img
+          src="https://i.pravatar.cc/300" // imagem de perfil dummy
+          alt="Perfil"
+          className="navbar-avatar"
+        />
+        {isDropdownVisible && (
+          <div className="navbar-dropdown">
+            <button onClick={() => navigate('/profile')}>Perfil</button>
+            <button onClick={handleLogout}>Logout</button>
+          </div>
+        )}
       </div>
     </nav>
   );

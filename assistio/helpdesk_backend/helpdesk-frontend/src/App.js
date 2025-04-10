@@ -6,10 +6,13 @@ import Sidebar from './components/Sidebar';
 import Navbar from './components/Navbar';
 import TicketList from './components/TicketList';
 import CreateTicket from './components/CreateTicket';
+import Home from './pages/Home';
+
 
 const Dashboard = () => <h1>Dashboard</h1>;
 const Clients = () => <h1>Clientes</h1>;
 const Kanban = () => <h1>Kanban</h1>;
+const Profile = () => <h1>Perfil do Operador</h1>;
 
 function App() {
   return (
@@ -20,12 +23,13 @@ function App() {
           <Navbar />
           <div style={{ padding: '80px 20px' }}>
             <Routes>
-              <Route path="/" element={<h1>Home</h1>} />
+              <Route path="/" element={<Home />} />
               <Route path="/tickets" element={<TicketList />} />
               <Route path="/create" element={<CreateTicket />} />
               <Route path="/dashboard" element={<Dashboard />} />
               <Route path="/clients" element={<Clients />} />
               <Route path="/kanban" element={<Kanban />} />
+              <Route path="/profile" element={<Profile />} />
             </Routes>
           </div>
         </div>
