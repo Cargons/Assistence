@@ -5,7 +5,8 @@ import './Sidebar.css'; // Arquivo de estilos
 const Sidebar = () => {
   return (
     <div className="sidebar">
-      <h2>Help Desk</h2>
+      <h2>Assistio</h2>
+      <hr></hr>
       <ul>
         <li>
           <NavLink to="/" exact activeClassName="active-link">
