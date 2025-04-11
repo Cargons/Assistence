@@ -1,0 +1,34 @@
+.operator-form-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 40px 20px;
+  }
+  
+  .operator-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .operator-form input {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+  }
+  
+  .operator-form button {
+    padding: 12px;
+    background-color: #8e44ad;
+    border: none;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s;
+  }
+  
+  .operator-form button:hover {
+    background-color: #6c3483;
+  }
+  

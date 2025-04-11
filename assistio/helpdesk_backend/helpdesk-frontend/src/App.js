@@ -8,6 +8,7 @@ import TicketList from './components/TicketList';
 import CreateTicket from './components/CreateTicket';
 import Home from './pages/Home';
 import CreateClient from './pages/CreateClient';
+import CreateOperator from './pages/CreateOperator';
 
 
 const Dashboard = () => <h1>Dashboard</h1>;
@@ -32,6 +33,7 @@ function App() {
               <Route path="/kanban" element={<Kanban />} />
               <Route path="/profile" element={<Profile />} />
               <Route path="/clients/create" element={<CreateClient />} />
+              <Route path="/operators/create" element={<CreateOperator />} />
             </Routes>
           </div>
         </div>
