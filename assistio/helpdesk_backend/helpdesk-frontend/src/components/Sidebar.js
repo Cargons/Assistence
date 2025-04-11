@@ -1,41 +1,22 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
-import './Sidebar.css'; // Arquivo de estilos
+import { Link } from 'react-router-dom';
+import './Sidebar.css';
 
 const Sidebar = () => {
   return (
     <div className="sidebar">
-      <h2>Assistio</h2>
-      <hr></hr>
+      <h2>Help Desk</h2>
       <ul>
-        <li>
-          <NavLink to="/" exact activeClassName="active-link">
-            Home
-          </NavLink>
-        </li>
-        <li>
-          <NavLink to="/tickets" activeClassName="active-link">
-            Tickets
-          </NavLink>
-        </li>
-        <li>
-          <NavLink to="/dashboard" activeClassName="active-link">
-            Dashboard
-          </NavLink>
-        </li>
-        <li>
-          <NavLink to="/clients" activeClassName="active-link">
-            Clientes
-          </NavLink>
-        </li>
-        <li>
-          <NavLink to="/kanban" activeClassName="active-link">
-            Kanban
-          </NavLink>
-        </li>
+        <li><Link to="/">Home</Link></li>
+        <li><Link to="/tickets">Tickets</Link></li>
+        <li><Link to="/dashboard">Dashboard</Link></li>
+        <li><Link to="/clients">Clientes</Link></li>
+        <li><Link to="/clients/create">Registrar Cliente</Link></li>
+        <li><Link to="/kanban">Kanban</Link></li>
       </ul>
     </div>
   );
 };
 
 export default Sidebar;
+

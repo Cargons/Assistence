@@ -7,6 +7,7 @@ import Navbar from './components/Navbar';
 import TicketList from './components/TicketList';
 import CreateTicket from './components/CreateTicket';
 import Home from './pages/Home';
+import CreateClient from './pages/CreateClient';
 
 
 const Dashboard = () => <h1>Dashboard</h1>;
@@ -30,6 +31,7 @@ function App() {
               <Route path="/clients" element={<Clients />} />
               <Route path="/kanban" element={<Kanban />} />
               <Route path="/profile" element={<Profile />} />
+              <Route path="/clients/create" element={<CreateClient />} />
             </Routes>
           </div>
         </div>
