@@ -7,7 +7,6 @@ const Navbar = () => {
   const navigate = useNavigate();
 
   const handleLogout = () => {
-    // Aqui você pode limpar o token ou sessão
     console.log('Logout');
     navigate('/'); // Redirecionar após logout
   };
@@ -22,7 +21,7 @@ const Navbar = () => {
         onMouseLeave={() => setDropdownVisible(false)}
       >
         <img
-          src="https://i.pravatar.cc/300" // imagem de perfil dummy
+          src="https://i.pravatar.cc/300" 
           alt="Perfil"
           className="navbar-avatar"
         />

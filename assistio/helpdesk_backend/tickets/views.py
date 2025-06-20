@@ -3,6 +3,7 @@ from rest_framework import viewsets
 from .models import Ticket, Client, Operator
 from .serializers import TicketSerializer, ClientSerializer, OperatorSerializer
 from .permissions import IsAdminOrSupervisor
+from rest_framework.permissions import IsAdminUser
 
 class TicketViewSet(viewsets.ModelViewSet):
     queryset = Ticket.objects.all().order_by('-created_at')
@@ -11,8 +12,6 @@ class TicketViewSet(viewsets.ModelViewSet):
 class ClientViewSet(viewsets.ModelViewSet):
     queryset = Client.objects.all().order_by('name')
     serializer_class = ClientSerializer
-
-from rest_framework.permissions import IsAdminUser
 
 class OperatorViewSet(viewsets.ModelViewSet):
     queryset = Operator.objects.all()
